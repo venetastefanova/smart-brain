@@ -21,7 +21,7 @@ export default class ProfileIcon extends Component {
       }
     render() {
         return (
-            <div className="pa4 tc">
+            <div className="pa4 tc" style={{marginRight:'100px'}}>
             <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle
                 tag="span"
@@ -33,9 +33,9 @@ export default class ProfileIcon extends Component {
                     className="br-100 ba h3 w3 dib" alt="avatar"/>
                 </div>
             </DropdownToggle>
-                <DropdownMenu className="b--transparent shadow-5" style={{ backgroundColor:'rgba(255,255,255,0.5'}}>
+                <DropdownMenu right className="b--transparent shadow-5" style={{ backgroundColor:'rgba(255,255,255,0.5'}}>
                 <DropdownItem>View profile</DropdownItem>
-                <DropdownItem>Sign up</DropdownItem>
+                <DropdownItem onClick={()=>this.props.onRouteChange('signout')}>Sign out</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
            
