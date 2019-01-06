@@ -34,7 +34,7 @@ export default class ProfileIcon extends Component {
                 </div>
             </DropdownToggle>
                 <DropdownMenu right className="b--transparent shadow-5" style={{ backgroundColor:'rgba(255,255,255,0.5'}}>
-                <DropdownItem>View profile</DropdownItem>
+                <DropdownItem onClick={this.props.toggleModal}>View profile</DropdownItem>
                 <DropdownItem onClick={()=>this.props.onRouteChange('signout')}>Sign out</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
