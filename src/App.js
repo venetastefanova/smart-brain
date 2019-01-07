@@ -125,6 +125,7 @@ class App extends Component {
       isProfileOpen: !prevState.isProfileOpen
     }));
   }
+
   render() {
     const { isSignedIn, imageUrl, route, boxes, isProfileOpen } = this.state;
     return (
@@ -139,7 +140,7 @@ class App extends Component {
 
          {isProfileOpen &&
               <Modal>
-                <Profile isProfileOpen={isProfileOpen} toggleModal={this.toggleModal}/>
+                <Profile isProfileOpen={isProfileOpen} toggleModal={this.toggleModal} user={this.state.user}/>
               </Modal>
               }
         { route === 'home'
